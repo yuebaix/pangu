@@ -1,7 +1,8 @@
 plugins {
     id 'java'
+    id 'java-library'
 }
 
 dependencies {
-    implementation project(':pangu-common')
+    api project(':pangu-common')
 }

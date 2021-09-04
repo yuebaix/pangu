@@ -3,3 +3,5 @@ include 'pangu-core'
 include 'pangu-common'
 include 'pangu-spring-boot-starter'
 include 'pangu-test'
+include 'pangu-ready-spring-boot-starter'
+

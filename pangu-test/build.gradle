@@ -4,7 +4,8 @@ plugins {
     id 'org.springframework.boot' version '2.5.4'
 }
 
-apply from: "${rootDir}/pangu-spring-boot-starter/integrate/pangu-denpendencies.gradle"
+//apply from: "${rootDir}/pangu-spring-boot-starter/integrate/pangu-denpendencies.gradle"
+apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
 
 jar.enabled = false
 bootJar.enabled = true
@@ -59,9 +60,11 @@ dependencies {
     annotationProcessor 'org.mapstruct:mapstruct-processor'
 
 
-    implementation project(':pangu-spring-boot-starter')
+    //implementation project(':pangu-spring-boot-starter')
+    implementation project(':pangu-ready-spring-boot-starter')
 
     //implementation "com.yuebaix:pangu-common:${panguCommonVersion}"
     //implementation "com.yuebaix:pangu-core:${panguCoreVersion}"
     //implementation "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"
+    //implementation "com.yuebaix:pangu-ready-spring-boot-starter:${panguReadySpringBootStarterVersion}"
 }

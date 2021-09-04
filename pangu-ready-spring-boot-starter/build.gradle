@@ -4,12 +4,9 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
-apply from: "${rootDir}/pangu-spring-boot-starter/integrate/pangu-denpendencies.gradle"
+apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
 
 dependencies {
-    implementation "org.slf4j:slf4j-api"
-    implementation "org.springframework:spring-context"
-
     implementation "org.springframework.boot:spring-boot-starter"
     annotationProcessor "org.springframework.boot:spring-boot-autoconfigure-processor"
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
@@ -21,5 +18,5 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
-    api project(':pangu-core')
+    api project(':pangu-spring-boot-starter')
 }
