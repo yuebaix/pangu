@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+apply from: "${rootDir}/pangu-spring-boot-starter/integrate/pangu-denpendencies.gradle"
+
+dependencies {
+    implementation "org.slf4j:slf4j-api"
+    implementation "org.springframework:spring-context"
+
+    implementation "org.springframework.boot:spring-boot-starter"
+    annotationProcessor "org.springframework.boot:spring-boot-autoconfigure-processor"
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+    implementation("org.springframework.cloud:spring-cloud-starter-zookeeper-discovery") {
+        exclude group: "org.apache.zookeeper", module: "zookeeper"
+    }
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+
+    implementation project(':pangu-common')
+    implementation project(':pangu-core')
+}

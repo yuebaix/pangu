@@ -1,0 +1,67 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '2.5.4'
+}
+
+apply from: "${rootDir}/pangu-spring-boot-starter/integrate/pangu-denpendencies.gradle"
+
+jar.enabled = false
+bootJar.enabled = true
+test.enabled = false
+
+ext {
+    hutoolVersion = '5.7.7'
+    guavaVersion ='30.1.1-jre'
+
+    commonsNetVersion = '3.8.0'
+    commonsCollections4Version = '4.4'
+
+    lombokVersion = '1.18.20'
+    mapstructVersion = '1.4.2.Final'
+}
+
+dependencyManagement {
+    dependencies {
+        dependency "cn.hutool:hutool-core:${hutoolVersion}"
+        dependency "com.google.guava:guava:${guavaVersion}"
+
+        dependency "commons-net:commons-net:${commonsNetVersion}"
+        dependency "org.apache.commons:commons-collections4:${commonsCollections4Version}"
+
+        dependency "org.projectlombok:lombok:${lombokVersion}"
+        dependency "org.mapstruct:mapstruct:${mapstructVersion}"
+        dependency "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    }
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+    implementation 'cn.hutool:hutool-core'
+    implementation 'com.google.guava:guava'
+
+    implementation 'commons-net:commons-net'
+    implementation 'org.apache.commons:commons-collections4'
+
+    implementation 'org.mapstruct:mapstruct'
+    annotationProcessor 'org.mapstruct:mapstruct-processor'
+
+
+    implementation project(':pangu-spring-boot-starter')
+
+    //implementation "com.yuebaix:pangu-common:${panguCommonVersion}"
+    //implementation "com.yuebaix:pangu-core:${panguCoreVersion}"
+    //implementation "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"
+}
