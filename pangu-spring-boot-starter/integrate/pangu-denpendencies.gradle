@@ -14,6 +14,7 @@ ext {
 
     panguCommonVersion = '0.0.1-SNAPSHOT'
     panguCoreVersion = '0.0.1-SNAPSHOT'
+    panguWebVersion = '0.0.1-SNAPSHOT'
     panguSpringBootStarterVersion = '0.0.1-SNAPSHOT'
 }
 
@@ -37,6 +38,7 @@ dependencyManagement {
 
         dependency "com.yuebaix:pangu-common:${panguCommonVersion}"
         dependency "com.yuebaix:pangu-core:${panguCoreVersion}"
+        dependency "com.yuebaix:pangu-web:${panguWebVersion}"
         dependency "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"
     }
 }

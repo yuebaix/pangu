@@ -23,6 +23,5 @@ dependencies {
     api 'io.springfox:springfox-boot-starter'
     api 'com.github.xiaoymin:knife4j-spring-ui'
 
-    api project(':pangu-web')
     api project(':pangu-spring-boot-starter')
 }
