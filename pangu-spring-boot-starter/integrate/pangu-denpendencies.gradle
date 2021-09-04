@@ -2,13 +2,15 @@ apply plugin: 'maven-publish'
 apply plugin: "io.spring.dependency-management"
 
 ext {
-    springVersion = '5.3.9'
-    springBootVersion = '2.5.4'
+    springVersion = '5.2.16.RELEASE'
+    springBootVersion = '2.3.12.RELEASE'
     springCloudVersion = 'Hoxton.SR12'
 
     java_version = JavaVersion.VERSION_1_8
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+
+    lombokVersion = '1.18.20'
 
     panguCommonVersion = '0.0.1-SNAPSHOT'
     panguCoreVersion = '0.0.1-SNAPSHOT'
@@ -31,6 +33,8 @@ dependencyManagement {
     }
 
     dependencies {
+        dependency "org.projectlombok:lombok:${lombokVersion}"
+
         dependency "com.yuebaix:pangu-common:${panguCommonVersion}"
         dependency "com.yuebaix:pangu-core:${panguCoreVersion}"
         dependency "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"

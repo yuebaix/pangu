@@ -13,10 +13,6 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-autoconfigure-processor"
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
-    implementation("org.springframework.cloud:spring-cloud-starter-zookeeper-discovery") {
-        exclude group: "org.apache.zookeeper", module: "zookeeper"
-    }
-
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     compileOnly 'org.projectlombok:lombok'
