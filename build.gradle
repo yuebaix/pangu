@@ -1,14 +1,15 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
 allprojects {
     group = 'com.yuebaix'
     version = '0.0.1-SNAPSHOT'
 }
 
 subprojects {
-    ext {
-        java_version = JavaVersion.VERSION_1_8
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
+    apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
 
     repositories {
         //mavenLocal()

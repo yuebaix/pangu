@@ -1,15 +1,15 @@
 plugins {
     id 'java'
     id 'java-library'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'io.spring.dependency-management'
 }
 
 apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter"
-    annotationProcessor "org.springframework.boot:spring-boot-autoconfigure-processor"
-    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    implementation 'org.springframework.boot:spring-boot-starter'
+    annotationProcessor 'org.springframework.boot:spring-boot-autoconfigure-processor'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
@@ -18,10 +18,11 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
-    api 'io.swagger:swagger-annotations:1.5.21'
-    api 'io.swagger:swagger-models:1.5.21'
-    api 'io.springfox:springfox-boot-starter:3.0.0'
-    api "com.github.xiaoymin:knife4j-spring-ui:3.0.2"
+    api 'io.swagger:swagger-annotations'
+    api 'io.swagger:swagger-models'
+    api 'io.springfox:springfox-boot-starter'
+    api 'com.github.xiaoymin:knife4j-spring-ui'
 
+    api project(':pangu-web')
     api project(':pangu-spring-boot-starter')
 }

@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    api project(':pangu-core')
+
+    implementation 'io.swagger:swagger-annotations'
+    implementation 'io.swagger:swagger-models'
+}

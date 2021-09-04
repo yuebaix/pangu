@@ -11,9 +11,15 @@ ext {
     targetCompatibility = JavaVersion.VERSION_1_8
 
     lombokVersion = '1.18.20'
+    mapstructVersion = '1.4.2.Final'
+
+    swaggerModelVersion = '1.5.21'
+    springfoxStarterVersion = '3.0.0'
+    knife4jUiVersion = '3.0.3'
 
     panguCommonVersion = '0.0.1-SNAPSHOT'
     panguCoreVersion = '0.0.1-SNAPSHOT'
+    panguWebVersion = '0.0.1-SNAPSHOT'
     panguSpringBootStarterVersion = '0.0.1-SNAPSHOT'
     panguReadySpringBootStarterVersion = '0.0.1-SNAPSHOT'
 }
@@ -35,9 +41,17 @@ dependencyManagement {
 
     dependencies {
         dependency "org.projectlombok:lombok:${lombokVersion}"
+        dependency "org.mapstruct:mapstruct:${mapstructVersion}"
+        dependency "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+
+        dependency "io.swagger:swagger-annotations:${swaggerModelVersion}"
+        dependency "io.swagger:swagger-models:${swaggerModelVersion}"
+        dependency "io.springfox:springfox-boot-starter:${springfoxStarterVersion}"
+        dependency "com.github.xiaoymin:knife4j-spring-ui:${knife4jUiVersion}"
 
         dependency "com.yuebaix:pangu-common:${panguCommonVersion}"
         dependency "com.yuebaix:pangu-core:${panguCoreVersion}"
+        dependency "com.yuebaix:pangu-web:${panguWebVersion}"
         dependency "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"
         dependency "com.yuebaix:pangu-ready-spring-boot-starter:${panguReadySpringBootStarterVersion}"
     }
