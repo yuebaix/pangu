@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.PostConstruct;
 
 @ConditionalOnProperty(
-        value = PanGuStarterConst.PANGU_STARTER_ENABLED,
+        value = PanGuStarterConst.PAN_GU_STARTER_ENABLED,
         havingValue = "true",
         matchIfMissing = true
 )

@@ -18,5 +18,8 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation "com.github.xiaoymin:knife4j-spring-ui:3.0.2"
+
     api project(':pangu-spring-boot-starter')
 }
