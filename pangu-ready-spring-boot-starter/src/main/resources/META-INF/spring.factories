@@ -1,2 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+  com.yuebaix.pangu.ready.PanGuReadyPropertySourceContextInitializer
+
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.yuebaix.pangu.ready.PanGuReadyAutoConfiguration
