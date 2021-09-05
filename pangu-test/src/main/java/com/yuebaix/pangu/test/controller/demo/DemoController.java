@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collections;
 
 @RestController
-@RequestMapping("/demo/test")
-public class TestController {
-    @ApiOperation("测试")
+@RequestMapping("/demo/demo")
+public class DemoController {
+    @ApiOperation("示例")
     @GetMapping("/check")
     public BaseResp check(BaseReq req) {
-        return BaseResp.success(JacksonUtil.write(Collections.singletonMap("say", "test")));
+        return BaseResp.success(JacksonUtil.write(Collections.singletonMap("say", "demo")));
     }
 }

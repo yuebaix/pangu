@@ -59,6 +59,7 @@ dependencies {
     implementation 'org.mapstruct:mapstruct'
     annotationProcessor 'org.mapstruct:mapstruct-processor'
 
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
     //implementation project(':pangu-web')
     //implementation project(':pangu-spring-boot-starter')
