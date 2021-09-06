@@ -28,3 +28,5 @@ out/
 *.classpath
 *.jar
 gradle/wrapper/
+gradlew
+gradlew.bat
