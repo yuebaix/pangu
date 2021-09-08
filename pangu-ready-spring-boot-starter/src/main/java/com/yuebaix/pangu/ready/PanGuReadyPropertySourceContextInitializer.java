@@ -46,7 +46,7 @@ public class PanGuReadyPropertySourceContextInitializer implements ApplicationCo
                 weakPanGuPropertySource.putProperty("logbook.exclude", "");
                 weakPanGuPropertySource.putProperty("logbook.filter.enabled", "true");
                 weakPanGuPropertySource.putProperty("logbook.secure-filter.enabled", "true");
-                weakPanGuPropertySource.putProperty("logbook.format.style", "http");
+                weakPanGuPropertySource.putProperty("logbook.format.style", "json");
                 weakPanGuPropertySource.putProperty("logbook.strategy", "default");
                 weakPanGuPropertySource.putProperty("logbook.minimum-status", "400");
                 weakPanGuPropertySource.putProperty("logbook.obfuscate.headers", "Authorization,Cookie,Set-Cookie");
@@ -67,7 +67,7 @@ logbook.include=/**
 logbook.exclude=
 logbook.filter.enabled=true
 logbook.secure-filter.enabled=true
-logbook.format.style=http
+logbook.format.style=json
 logbook.strategy=default
 logbook.minimum-status=400
 logbook.obfuscate.headers=Authorization,Cookie,Set-Cookie

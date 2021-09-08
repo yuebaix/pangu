@@ -3,11 +3,11 @@ package com.yuebaix.pangu.web.base;
 import com.yuebaix.pangu.web.PanGuWebConst;
 import com.yuebaix.pangu.web.PanGuWebException;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class RespCodeConst {
-    private static final Map<Integer, RespCode> respCodeRegistry = new HashMap<>();
+    private static final Map<Integer, RespCode> respCodeRegistry = new ConcurrentHashMap<>();
 
     public static final RespCode SUCCESS = validateAndGet(0, PanGuWebConst.SUCCESS);
     public static final RespCode FAIL = validateAndGet(1, PanGuWebConst.FAIL);

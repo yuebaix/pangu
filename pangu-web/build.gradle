@@ -9,8 +9,11 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
-    api project(':pangu-core')
-
     implementation 'io.swagger:swagger-annotations'
     implementation 'io.swagger:swagger-models'
+
+    api 'org.apache.commons:commons-lang3'
+    api 'org.apache.commons:commons-collections4'
+    api 'cn.hutool:hutool-crypto'
+    api project(':pangu-core')
 }

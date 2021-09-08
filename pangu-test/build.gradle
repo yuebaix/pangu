@@ -12,27 +12,12 @@ bootJar.enabled = true
 test.enabled = false
 
 ext {
-    hutoolVersion = '5.7.7'
-    guavaVersion ='30.1.1-jre'
 
-    commonsNetVersion = '3.8.0'
-    commonsCollections4Version = '4.4'
-
-    lombokVersion = '1.18.20'
-    mapstructVersion = '1.4.2.Final'
 }
 
 dependencyManagement {
     dependencies {
-        dependency "cn.hutool:hutool-core:${hutoolVersion}"
-        dependency "com.google.guava:guava:${guavaVersion}"
 
-        dependency "commons-net:commons-net:${commonsNetVersion}"
-        dependency "org.apache.commons:commons-collections4:${commonsCollections4Version}"
-
-        dependency "org.projectlombok:lombok:${lombokVersion}"
-        dependency "org.mapstruct:mapstruct:${mapstructVersion}"
-        dependency "org.mapstruct:mapstruct-processor:${mapstructVersion}"
     }
 }
 
@@ -50,6 +35,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 
+    implementation 'com.alibaba:fastjson'
     implementation 'cn.hutool:hutool-core'
     implementation 'com.google.guava:guava'
 
