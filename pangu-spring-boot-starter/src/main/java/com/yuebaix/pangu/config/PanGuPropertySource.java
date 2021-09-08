@@ -24,4 +24,8 @@ public class PanGuPropertySource extends PropertySource {
             properties.put(name, value);
         }
     }
+
+    public void removeAll() {
+        properties.clear();
+    }
 }

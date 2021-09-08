@@ -17,6 +17,8 @@ ext {
     springfoxStarterVersion = '3.0.0'
     knife4jUiVersion = '3.0.3'
 
+    logbookVersion = '2.12.0'
+
     panguCommonVersion = '0.0.1-SNAPSHOT'
     panguCoreVersion = '0.0.1-SNAPSHOT'
     panguWebVersion = '0.0.1-SNAPSHOT'
@@ -48,6 +50,7 @@ dependencyManagement {
         dependency "io.swagger:swagger-models:${swaggerModelVersion}"
         dependency "io.springfox:springfox-boot-starter:${springfoxStarterVersion}"
         dependency "com.github.xiaoymin:knife4j-spring-ui:${knife4jUiVersion}"
+        dependency "org.zalando:logbook-spring-boot-starter:${logbookVersion}"
 
         dependency "com.yuebaix:pangu-common:${panguCommonVersion}"
         dependency "com.yuebaix:pangu-core:${panguCoreVersion}"
