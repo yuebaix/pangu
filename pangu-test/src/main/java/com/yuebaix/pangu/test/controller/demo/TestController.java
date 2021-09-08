@@ -1,6 +1,5 @@
 package com.yuebaix.pangu.test.controller.demo;
 
-import com.yuebaix.pangu.common.util.JacksonUtil;
 import com.yuebaix.pangu.web.base.BaseReq;
 import com.yuebaix.pangu.web.base.BaseResp;
 import io.swagger.annotations.ApiOperation;
@@ -16,6 +15,6 @@ public class TestController {
     @ApiOperation("测试")
     @GetMapping("/check")
     public BaseResp check(BaseReq req) {
-        return BaseResp.success(JacksonUtil.write(Collections.singletonMap("say", "test")));
+        return BaseResp.success(Collections.singletonMap("say", "test"));
     }
 }

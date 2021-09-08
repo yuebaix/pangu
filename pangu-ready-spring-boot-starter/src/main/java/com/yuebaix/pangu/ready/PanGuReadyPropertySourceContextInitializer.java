@@ -43,14 +43,16 @@ public class PanGuReadyPropertySourceContextInitializer implements ApplicationCo
             if (!PanGuReadyStarterConst.PROPERTY_FALSE.equals(
                     environment.getProperty(PanGuReadyStarterConst.PAN_GU_READY_STARTER_LOGBOOK_ENABLED))) {
                 weakPanGuPropertySource.putProperty("logbook.include", "/**");
+                weakPanGuPropertySource.putProperty("logbook.exclude", "");
                 weakPanGuPropertySource.putProperty("logbook.filter.enabled", "true");
                 weakPanGuPropertySource.putProperty("logbook.secure-filter.enabled", "true");
                 weakPanGuPropertySource.putProperty("logbook.format.style", "http");
                 weakPanGuPropertySource.putProperty("logbook.strategy", "default");
                 weakPanGuPropertySource.putProperty("logbook.minimum-status", "400");
                 weakPanGuPropertySource.putProperty("logbook.obfuscate.headers", "Authorization,Cookie,Set-Cookie");
-                weakPanGuPropertySource.putProperty("logbook.obfuscate.parameters", "access_token,password,token,mobile,email");
+                weakPanGuPropertySource.putProperty("logbook.obfuscate.parameters", "password,token,mobile,email");
                 weakPanGuPropertySource.putProperty("logbook.write.chunk-size", "1000");
+                weakPanGuPropertySource.putProperty("pangu.readystarter.logbook.config.obfuscate-body-params", "token,password,mobile,email");
             }
             //inject config here ...
         }
@@ -59,6 +61,7 @@ public class PanGuReadyPropertySourceContextInitializer implements ApplicationCo
 /*
 # swagger
 springfox.documentation.swagger-ui.enabled=false
+
 # logbook
 logbook.include=/**
 logbook.exclude=
@@ -70,4 +73,6 @@ logbook.minimum-status=400
 logbook.obfuscate.headers=Authorization,Cookie,Set-Cookie
 logbook.obfuscate.parameters=access_token,password,token,mobile,email
 logbook.write.chunk-size=1000
+pangu.readystarter.logbook.config.obfuscate-body-params=token,password,mobile,email
+
  */
