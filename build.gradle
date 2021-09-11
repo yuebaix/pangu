@@ -10,6 +10,7 @@ allprojects {
 
 subprojects {
     apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
+    apply from: "${rootDir}/oss-publish.gradle"
 
     repositories {
         //mavenLocal()

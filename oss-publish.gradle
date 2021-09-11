@@ -1,0 +1,90 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+javadoc {
+    description = "Generates project-level javadoc for use in -javadoc jar"
+
+    options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
+    options.author = true
+    options.version = true
+    options.header = project.name
+    options.addStringOption('Xdoclint:none', '-quiet')
+
+    logging.captureStandardError LogLevel.INFO
+    logging.captureStandardOutput LogLevel.INFO
+    options.encoding = "UTF-8"
+    options.charSet = 'UTF-8'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication){
+            groupId project.group
+            artifactId project.name
+            version project.version
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+
+            pom {
+                name = 'Pangu Framework'
+                description = 'An all-in-one,out-of-the-box solution for handling web development.Handle chanllenges with own solid core codes.Support conveniences with springboot famework.'
+                url = "https://github.com/yuebaix/pangu"
+                licenses {
+                    license {
+                        name = "The Apache License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "89335097"
+                        name = "yuebaix"
+                        email = "yuebaix@outlook.com"
+                    }
+                }
+                scm {
+                    connection = "scm:git:https://github.com/yuebaix/pangu.git"
+                    developerConnection = "scm:git:https://github.com/yuebaix/pangu.git"
+                    url = "https://github.com/yuebaix/pangu"
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username ossrhUsername
+                password ossrhPassword
+            }
+        }
+    }
+}
+
+signing {
+    sign configurations.archives
+}
