@@ -10,6 +10,7 @@ apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-de
 jar.enabled = false
 bootJar.enabled = true
 test.enabled = false
+publishMavenJavaPublicationToMavenRepository.enabled = false
 
 ext {
 
