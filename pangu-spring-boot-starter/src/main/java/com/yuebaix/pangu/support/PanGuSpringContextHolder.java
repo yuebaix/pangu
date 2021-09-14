@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.support;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
@@ -18,7 +19,7 @@ public class PanGuSpringContextHolder implements ApplicationContextAware, Enviro
     @Override
     public void setEnvironment(Environment environment) {
         this.environment = environment;
-        log.debug(this.getClass().getSimpleName() + PanGuCoreConst.TRACE_ARROW + "Environment Injected");
+        PanGuLog.debug(log, this.getClass().getSimpleName() + PanGuCoreConst.TRACE_ARROW + "Environment Injected");
     }
 
     public String getProperty(String key) {
@@ -32,7 +33,7 @@ public class PanGuSpringContextHolder implements ApplicationContextAware, Enviro
     @Override
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
         this.context = ctx;
-        log.debug(this.getClass().getSimpleName() + PanGuCoreConst.TRACE_ARROW + "ApplicationContext Injected");
+        PanGuLog.debug(log, this.getClass().getSimpleName() + PanGuCoreConst.TRACE_ARROW + "ApplicationContext Injected");
     }
 
     public <T> Map<String, T> getBeansOfType(Class<T> clazz) {

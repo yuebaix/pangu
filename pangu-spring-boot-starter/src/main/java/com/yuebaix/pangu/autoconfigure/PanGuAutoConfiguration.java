@@ -1,6 +1,7 @@
 package com.yuebaix.pangu.autoconfigure;
 
 import com.yuebaix.pangu.autoconfigure.common.PanGuStarterConst;
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import com.yuebaix.pangu.support.PanGuSpringContextHolder;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +22,7 @@ import javax.annotation.PostConstruct;
 public class PanGuAutoConfiguration {
     @PostConstruct
     public void postInit() {
-        log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Initialized");
+        PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Initialized");
     }
 
     @Bean

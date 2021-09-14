@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.ready;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -19,6 +20,6 @@ import javax.annotation.PostConstruct;
 public class PanGuReadyAutoConfiguration {
     @PostConstruct
     public void postInit() {
-        log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Ready Initialized");
+        PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Ready Initialized");
     }
 }

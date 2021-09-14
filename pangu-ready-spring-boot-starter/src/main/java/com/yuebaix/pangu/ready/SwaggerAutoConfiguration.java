@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.ready;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +28,7 @@ import javax.annotation.PostConstruct;
 public class SwaggerAutoConfiguration {
     @PostConstruct
     public void postInit() {
-        log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Ready Swagger Initialized");
+        PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Ready Swagger Initialized");
     }
 
     @Bean("DefaultDocket")

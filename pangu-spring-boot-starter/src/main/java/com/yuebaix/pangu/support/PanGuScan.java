@@ -2,6 +2,7 @@ package com.yuebaix.pangu.support;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.yuebaix.pangu.autoconfigure.common.PanGuStarterConst;
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.common.util.JacksonUtil;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import lombok.Data;
@@ -69,7 +70,7 @@ public abstract class PanGuScan implements EnvironmentAware {
                     PanGuScanTypeFilterPatternConfig activePatternConfig = fromConfig(activeConfig);
                     this.activeProfile = active;
                     this.activePatternConfig = activePatternConfig;
-                    log.debug(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan " + this.getClass().getSimpleName() +
+                    PanGuLog.debug(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan " + this.getClass().getSimpleName() +
                             " Initialized | active:{} | config:{}", active, JacksonUtil.write(activeConfig));
                 }
             }
@@ -81,7 +82,7 @@ public abstract class PanGuScan implements EnvironmentAware {
         if (CHOICE_EXCLUDE == choice) {
             for (Pattern pattern : activePatternConfig.getExcludePattern()) {
                 if (isMatch(pattern, className)) {
-                    log.debug(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan Exclude | active:{} | pattern:{} | className:{}",
+                    PanGuLog.debug(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan Exclude | active:{} | pattern:{} | className:{}",
                             activeProfile, pattern.pattern(), className);
                     return true;
                 }
@@ -89,7 +90,7 @@ public abstract class PanGuScan implements EnvironmentAware {
         } else if (CHOICE_INCLUDE == choice) {
             for (Pattern pattern : activePatternConfig.getIncludePattern()) {
                 if (isMatch(pattern, className)) {
-                    log.debug(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan Include | active:{} | pattern:{} | className:{}",
+                    PanGuLog.debug(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan Include | active:{} | pattern:{} | className:{}",
                             activeProfile, pattern.pattern(), className);
                     return true;
                 }

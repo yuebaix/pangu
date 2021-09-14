@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.ready;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import com.yuebaix.pangu.ready.logbook.PanGuLogbookProperties;
 import com.yuebaix.pangu.ready.logbook.PanGuLogbookWriter;
@@ -25,7 +26,7 @@ public class LogbookAutoConfiguration {
 
     @PostConstruct
     public void postInit() {
-        log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Ready Logbook Initialized");
+        PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGu Ready Logbook Initialized");
     }
 
     @Bean

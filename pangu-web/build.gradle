@@ -9,6 +9,8 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+    testImplementation 'junit:junit'
+
     implementation 'io.swagger:swagger-annotations'
     implementation 'io.swagger:swagger-models'
 

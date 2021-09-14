@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.ready.logbook;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import lombok.extern.slf4j.Slf4j;
 import org.zalando.logbook.Correlation;
 import org.zalando.logbook.HttpLogWriter;
@@ -11,11 +12,11 @@ import java.io.IOException;
 public class PanGuLogbookWriter implements HttpLogWriter {
     @Override
     public void write(Precorrelation precorrelation, String request) throws IOException {
-        log.info(request);
+        PanGuLog.info(log, request);
     }
 
     @Override
     public void write(Correlation correlation, String response) throws IOException {
-        log.info(response);
+        PanGuLog.info(log, response);
     }
 }

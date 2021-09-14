@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.ready;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.config.PanGuPropertySource;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +19,7 @@ public class PanGuReadyPropertySourceContextInitializer implements ApplicationCo
         ConfigurableEnvironment environment = context.getEnvironment();
         if (!environment.getPropertySources().contains(STRONG_PROPERTY_SOURCE_NAME)) {
             environment.getPropertySources().addFirst(new PanGuPropertySource(STRONG_PROPERTY_SOURCE_NAME));
-            log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "StrongPropertySource Initialized");
+            PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "StrongPropertySource Initialized");
         }
         PropertySource strongPropertySource = environment.getPropertySources().get(STRONG_PROPERTY_SOURCE_NAME);
         if (strongPropertySource instanceof PanGuPropertySource) {
@@ -27,7 +28,7 @@ public class PanGuReadyPropertySourceContextInitializer implements ApplicationCo
         }
         if (!environment.getPropertySources().contains(WEAK_PROPERTY_SOURCE_NAME)) {
             environment.getPropertySources().addLast(new PanGuPropertySource(WEAK_PROPERTY_SOURCE_NAME));
-            log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "WeakPropertySource Initialized");
+            PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "WeakPropertySource Initialized");
         }
         PropertySource weakPropertySource = environment.getPropertySources().get(WEAK_PROPERTY_SOURCE_NAME);
         if (weakPropertySource instanceof PanGuPropertySource) {

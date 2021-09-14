@@ -9,5 +9,7 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+    testImplementation 'junit:junit'
+
     api project(':pangu-common')
 }

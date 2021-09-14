@@ -1,5 +1,6 @@
 package com.yuebaix.pangu.config;
 
+import com.yuebaix.pangu.common.PanGuLog;
 import com.yuebaix.pangu.core.PanGuCoreConst;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContextInitializer;
@@ -16,7 +17,7 @@ public class PanGuPropertySourceContextInitializer implements ApplicationContext
         ConfigurableEnvironment environment = context.getEnvironment();
         if (!environment.getPropertySources().contains(PanGuPropertySourceContextInitializer.PROPERTY_SOURCE_NAME)) {
             environment.getPropertySources().addLast(new PanGuPropertySource(PanGuPropertySourceContextInitializer.PROPERTY_SOURCE_NAME));
-            log.info(PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PropertySource Initialized");
+            PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PropertySource Initialized");
         }
         PropertySource propertySource = environment.getPropertySources().get(PROPERTY_SOURCE_NAME);
         if (propertySource instanceof PanGuPropertySource) {
