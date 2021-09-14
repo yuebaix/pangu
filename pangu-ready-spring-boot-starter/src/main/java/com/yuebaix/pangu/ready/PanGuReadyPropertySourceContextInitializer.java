@@ -44,7 +44,7 @@ public class PanGuReadyPropertySourceContextInitializer implements ApplicationCo
             if (!PanGuReadyStarterConst.PROPERTY_FALSE.equals(
                     environment.getProperty(PanGuReadyStarterConst.PAN_GU_READY_STARTER_LOGBOOK_ENABLED))) {
                 weakPanGuPropertySource.putProperty("logbook.include", "/**");
-                weakPanGuPropertySource.putProperty("logbook.exclude", "");
+                weakPanGuPropertySource.putProperty("logbook.exclude", "${server.servlet.context-path:}/webjars/**,${server.servlet.context-path:}/v3/api-docs,${server.servlet.context-path:}/swagger-resources/**,${server.servlet.context-path:}/doc.html,${server.servlet.context-path:}/,${server.servlet.context-path:}/csrf");
                 weakPanGuPropertySource.putProperty("logbook.filter.enabled", "true");
                 weakPanGuPropertySource.putProperty("logbook.secure-filter.enabled", "true");
                 weakPanGuPropertySource.putProperty("logbook.format.style", "json");
@@ -65,7 +65,7 @@ springfox.documentation.swagger-ui.enabled=false
 
 # logbook
 logbook.include=/**
-logbook.exclude=
+logbook.exclude=${server.servlet.context-path:}/webjars/**,${server.servlet.context-path:}/v3/api-docs,${server.servlet.context-path:}/swagger-resources/**,${server.servlet.context-path:}/doc.html,${server.servlet.context-path:}/,${server.servlet.context-path:}/csrf
 logbook.filter.enabled=true
 logbook.secure-filter.enabled=true
 logbook.format.style=json
