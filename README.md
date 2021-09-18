@@ -22,7 +22,7 @@
 ├─pangu-core (frame code 框架代码)
 ├─pangu-web (web code 网站基础代码)
 ├─pangu-spring-boot-starter (starter for pangu 盘古starter)
-├─pangu-ready-spring-boot-starter (starter for pangu and other general enhancements 封装盘古与通用增强starter)
+├─pangu-ready-spring-boot-starter (starter for pangu and more enhancements 封装盘古与更多增强starter)
 └─pangu-test (integrated test code 集成测试代码)
 ```
 
