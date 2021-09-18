@@ -30,28 +30,6 @@
 
 ## Roadmap
 
-[comment]: <> (
-https://mermaid-js.github.io/mermaid-live-editor
-```mermaid
-gantt
-    dateFormat YYYY-MM-DD
-    title PanGu Roadmap
-    section init frame
-    archetype: active, 1_1, 2021-09-04, 15d
-    section build frame
-    concept: active, 2_1, after 1_1, 30d
-    config: active, 2_2, after 1_1, 30d
-    event: 2_3, after 1_1, 30d
-    concurrent: 2_4, after 1_1, 30d
-    server: 2_5, after 1_1, 30d
-    cache: 2_6, after 1_1, 30d
-    io: 2_7, after 1_1, 30d
-    section build web solution
-    net: 3_1, after 2_1, 30d
-    rbac: 3_1, after 2_1, 30d
-```
-)
-
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbmRhdGVGb3JtYXQgWVlZWS1NTS1ERFxudGl0bGUgUGFuR3UgUm9hZG1hcFxuc2VjdGlvbiBpbml0IGZyYW1lXG5hcmNoZXR5cGU6IGFjdGl2ZSwgMV8xLCAyMDIxLTA5LTA0LCAxNWRcbnNlY3Rpb24gYnVpbGQgZnJhbWVcbmNvbmNlcHQ6IGFjdGl2ZSwgMl8xLCBhZnRlciAxXzEsIDMwZFxuY29uZmlnOiBhY3RpdmUsIDJfMiwgYWZ0ZXIgMV8xLCAzMGRcbmV2ZW50OiAyXzMsIGFmdGVyIDFfMSwgMzBkXG5jb25jdXJyZW50OiAyXzQsIGFmdGVyIDFfMSwgMzBkXG5zZXJ2ZXI6IDJfNSwgYWZ0ZXIgMV8xLCAzMGRcbmNhY2hlOiAyXzYsIGFmdGVyIDFfMSwgMzBkXG5pbzogMl83LCBhZnRlciAxXzEsIDMwZFxuc2VjdGlvbiBidWlsZCB3ZWIgc29sdXRpb25cbm5ldDogM18xLCBhZnRlciAyXzEsIDMwZFxucmJhYzogM18xLCBhZnRlciAyXzEsIDMwZCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/edit##eyJjb2RlIjoiZ2FudHRcbmRhdGVGb3JtYXQgWVlZWS1NTS1ERFxudGl0bGUgUGFuR3UgUm9hZG1hcFxuc2VjdGlvbiBpbml0IGZyYW1lXG5hcmNoZXR5cGU6IGFjdGl2ZSwgMV8xLCAyMDIxLTA5LTA0LCAxNWRcbnNlY3Rpb24gYnVpbGQgZnJhbWVcbmNvbmNlcHQ6IGFjdGl2ZSwgMl8xLCBhZnRlciAxXzEsIDMwZFxuY29uZmlnOiBhY3RpdmUsIDJfMiwgYWZ0ZXIgMV8xLCAzMGRcbmV2ZW50OiAyXzMsIGFmdGVyIDFfMSwgMzBkXG5jb25jdXJyZW50OiAyXzQsIGFmdGVyIDFfMSwgMzBkXG5zZXJ2ZXI6IDJfNSwgYWZ0ZXIgMV8xLCAzMGRcbmNhY2hlOiAyXzYsIGFmdGVyIDFfMSwgMzBkXG5pbzogMl83LCBhZnRlciAxXzEsIDMwZFxuc2VjdGlvbiBidWlsZCB3ZWIgc29sdXRpb25cbm5ldDogM18xLCBhZnRlciAyXzEsIDMwZFxucmJhYzogM18xLCBhZnRlciAyXzEsIDMwZCIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOnRydWUsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
 
 ## LICENSE
