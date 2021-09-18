@@ -16,6 +16,16 @@
 
 ## Structure
 
+```text
+.
+├─pangu-common (base code 基础代码)
+├─pangu-core (frame code 框架代码)
+├─pangu-web (web code 网站基础代码)
+├─pangu-spring-boot-starter (starter for pangu 盘古starter)
+├─pangu-ready-spring-boot-starter (starter for pangu and other general enhancements 封装盘古与通用增强starter)
+└─pangu-test (integrated test code 集成测试代码)
+```
+
 ## Getting Started
 
 ## Roadmap
@@ -23,5 +33,7 @@
 ## LICENSE
 
 ## Maintainers
+
+[![Gmail](https://img.shields.io/badge/-yuebaix@outlook.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:yuebaix@outlook.com)
 
 ## Changelog
