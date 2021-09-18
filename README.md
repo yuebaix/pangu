@@ -26,6 +26,11 @@
 └─pangu-test (integrated test code 集成测试代码)
 ```
 
+## Give a Star! ⭐
+
+If you like or are using this project to learn or start your solution, please give it a star. Thanks!<br/>
+觉得不错的话，别忘 star 👏
+
 ## Getting Started
 
 ## Roadmap
@@ -39,3 +44,8 @@
 [![Gmail](https://img.shields.io/badge/-yuebaix@outlook.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:yuebaix@outlook.com)
 
 ## Changelog
+
+| Date       | Version         | Description                   |
+| ---------- | --------------- | ----------------------------- |
+| 2021-09-19 | 0.0.1           | first release<br />第一次发布 |
+| 2021-09-04 | 0.0.1-SNAPSHOTT | init project<br />项目初始化  |
