@@ -49,5 +49,5 @@ If you like or are using this project to learn or start your solution, please gi
 
 | Date       | Version         | Description                   |
 | ---------- | --------------- | ----------------------------- |
-| 2021-09-19 | 0.0.1           | first release<br />第一次发布 |
+| 2021-09-20 | 0.0.1           | first release<br />第一次发布 |
 | 2021-09-04 | 0.0.1-SNAPSHOTT | init project<br />项目初始化  |

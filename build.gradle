@@ -5,7 +5,7 @@ plugins {
 
 allprojects {
     group = 'com.yuebaix'
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.1'
 }
 
 subprojects {
@@ -14,8 +14,10 @@ subprojects {
 
     repositories {
         //mavenLocal()
+        //maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+        //maven { url 'https://s01.oss.sonatype.org/content/groups/staging/' }
+        //maven { url 'https://s01.oss.sonatype.org/content/repositories/releases/' }
         //mavenCentral()
-        //maven { url 'https://oss.sonatype.org/content/groups/public' }
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
     }
 }

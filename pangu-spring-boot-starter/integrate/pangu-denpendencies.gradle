@@ -12,10 +12,11 @@ ext {
 
     lombokVersion = '1.18.20'
 
-    panguCommonVersion = '0.0.1-SNAPSHOT'
-    panguCoreVersion = '0.0.1-SNAPSHOT'
-    panguWebVersion = '0.0.1-SNAPSHOT'
-    panguSpringBootStarterVersion = '0.0.1-SNAPSHOT'
+    panguVersion = '0.0.1'
+    panguCommonVersion = panguVersion
+    panguCoreVersion = panguVersion
+    panguWebVersion = panguVersion
+    panguSpringBootStarterVersion = panguVersion
 }
 
 repositories {
