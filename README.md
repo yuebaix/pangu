@@ -39,6 +39,8 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## LICENSE
 
+[![Blush License](http://img.shields.io/badge/license-blush-white?style=for-the-badge&labelColor=black&color=white)](https://github.com/yuebaix/pangu/blob/main/LICENSE)
+
 ## Maintainers
 
 [![Gmail](https://img.shields.io/badge/-yuebaix@outlook.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:yuebaix@outlook.com)
