@@ -1,0 +1,78 @@
+apply plugin: 'maven-publish'
+apply plugin: "io.spring.dependency-management"
+
+ext {
+    springVersion = '5.1.20.RELEASE'
+    springBootVersion = '2.1.18.RELEASE'
+    springCloudVersion = 'Greenwich.SR6'
+
+    java_version = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    lombokVersion = '1.18.20'
+    mapstructVersion = '1.4.2.Final'
+
+    commonLang3Version = '3.12.0'
+    commonsCollections4Version = '4.4'
+    commonsNetVersion = '3.8.0'
+    guavaVersion ='30.1.1-jre'
+    fastjsonVersion = '1.2.76'
+    hutoolVersion = '5.7.7'
+
+    swaggerModelVersion = '1.5.21'
+    springfoxStarterVersion = '3.0.0'
+    knife4jUiVersion = '3.0.3'
+
+    logbookVersion = '2.12.0'
+
+    panguVersion = '0.0.1'
+    panguCommonVersion = panguVersion
+    panguCoreVersion = panguVersion
+    panguWebVersion = panguVersion
+    panguSpringBootStarterVersion = panguVersion
+    panguReadySpringBootStarterVersion = panguVersion
+}
+
+repositories {
+    maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+}
+
+dependencyManagement {
+    resolutionStrategy {
+        cacheChangingModulesFor 0, 'seconds'
+    }
+
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        mavenBom "org.springframework:spring-framework-bom:${springVersion}"
+    }
+
+    dependencies {
+        dependency "org.projectlombok:lombok:${lombokVersion}"
+        dependency "org.mapstruct:mapstruct:${mapstructVersion}"
+        dependency "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+
+        dependency "org.apache.commons:commons-lang3:${commonLang3Version}"
+        dependency "org.apache.commons:commons-collections4:${commonsCollections4Version}"
+        dependency "commons-net:commons-net:${commonsNetVersion}"
+        dependency "com.google.guava:guava:${guavaVersion}"
+        dependency "com.alibaba:fastjson:${fastjsonVersion}"
+        dependency "cn.hutool:hutool-core:${hutoolVersion}"
+        dependency "cn.hutool:hutool-crypto:${hutoolVersion}"
+        dependency "cn.hutool:hutool-extra:${hutoolVersion}"
+
+        dependency "io.swagger:swagger-annotations:${swaggerModelVersion}"
+        dependency "io.swagger:swagger-models:${swaggerModelVersion}"
+        dependency "io.springfox:springfox-boot-starter:${springfoxStarterVersion}"
+        dependency "com.github.xiaoymin:knife4j-spring-ui:${knife4jUiVersion}"
+        dependency "org.zalando:logbook-spring-boot-starter:${logbookVersion}"
+
+        dependency "com.yuebaix:pangu-common:${panguCommonVersion}"
+        dependency "com.yuebaix:pangu-core:${panguCoreVersion}"
+        dependency "com.yuebaix:pangu-web:${panguWebVersion}"
+        dependency "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"
+        dependency "com.yuebaix:pangu-ready-spring-boot-starter:${panguReadySpringBootStarterVersion}"
+    }
+}
