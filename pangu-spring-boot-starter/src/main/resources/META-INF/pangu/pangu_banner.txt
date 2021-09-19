@@ -4,11 +4,12 @@ ___  __ \_____ _______      __  ____/___  __
 __  /_/ /  __ `/_  __ \     _  / __ _  / / /
 _  ____// /_/ /_  / / /     / /_/ / / /_/ /
 /_/     \__,_/ /_/ /_/      \____/  \__,_/
-${AnsiColor.BRIGHT_MAGENTA}
- :: PanGu  Boot   ::     ${pangu-boot.version}
- :: PanGu  Repo   ::     ${pangu.repo}
- :: Author Name   ::     ${pangu.author_name}
- :: Author Email  ::     ${pangu.author_email}
- :: Author Github ::     ${pangu.author_github}
- :: Author Gitee  ::     ${pangu.author_gitee}
+${AnsiColor.BRIGHT_GREEN}
+ :: Spring Boot    ::   ${spring-boot.formatted-version}${AnsiColor.BRIGHT_MAGENTA}
+ :: PanGu  Starter ::    ${pangu-starter.version}
+ :: PanGu  Repo    ::    ${pangu.repo}
+ :: Author Name    ::    ${pangu.author_name}
+ :: Author Email   ::    ${pangu.author_email}
+ :: Author Github  ::    ${pangu.author_github}
+ :: Author Gitee   ::    ${pangu.author_gitee}
 ${AnsiColor.DEFAULT}
