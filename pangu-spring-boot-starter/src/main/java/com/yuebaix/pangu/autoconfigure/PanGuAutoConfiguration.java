@@ -27,6 +27,7 @@ public class PanGuAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(PanGuSpringContextHolder.class)
+    @ConditionalOnProperty(value = PanGuStarterConst.PAN_GU_STARTER_CONTEXT_HOLDER_ENABLED, havingValue = "true", matchIfMissing = true)
     public PanGuSpringContextHolder panGuSpringContextHolder() {
         return new PanGuSpringContextHolder();
     }
