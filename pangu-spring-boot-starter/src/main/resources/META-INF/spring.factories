@@ -1,3 +1,6 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  com.yuebaix.pangu.autoconfigure.PanGuEnvironmentPostProcessor
+
 org.springframework.context.ApplicationContextInitializer=\
   com.yuebaix.pangu.config.PanGuPropertySourceContextInitializer
 
