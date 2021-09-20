@@ -33,6 +33,51 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Getting Started
 
+### 1.Add dependency(Must). 添加依赖(必须)。
+
+* gradle
+
+```groovy
+implementation 'com.yuebaix:pangu-ready-spring-boot-starter:0.0.1'
+```
+
+* maven
+
+```xml
+<dependency>
+    <groupId>com.yuebaix</groupId>
+    <artifactId>pangu-ready-spring-boot-starter</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
+### 2.Manage dependencies(Recommend). 依赖管理(推荐)。
+
+### 3.Config to meet your flavor(Unnecessary). 配置一下满足你的口味(非必须)。
+
+Here's the default configuration. 下面是默认的配置
+
+```properties
+pangu.starter.enabled=true
+pangu.starter.ctxHolder.enabled=true
+pangu.starter.banner.enabled=true
+pangu.starter.banner.springboot.enabled=false
+pangu.starter.banner.pangu.enabled=true
+
+pangu.readystarter.enabled=true
+pangu.readystarter.swagger.enabled=true
+pangu.readystarter.logbook.enabled=true
+pangu.readystarter.logbook.config.obfuscate-body-params=token,password,mobile,email
+```
+
+### 4.Kickstart. 启动。
+
+Run your springboot application. Console output will look like below. 启动你的Springboot应用。控制台输出会向下面这样。
+
+![Console Output]()
+
+### 5.Enjoy. 愉快玩耍吧。😉
+
 ## Roadmap
 
 ![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbmRhdGVGb3JtYXQgWVlZWS1NTS1ERFxudGl0bGUgUGFuR3UgUm9hZG1hcFxuc2VjdGlvbiBpbml0IGZyYW1lXG5hcmNoZXR5cGU6IGFjdGl2ZSwgMV8xLCAyMDIxLTA5LTA0LCAxNWRcbnNlY3Rpb24gYnVpbGQgZnJhbWVcbmNvbmNlcHQ6IGFjdGl2ZSwgMl8xLCBhZnRlciAxXzEsIDMwZFxuY29uZmlnOiBhY3RpdmUsIDJfMiwgYWZ0ZXIgMV8xLCAzMGRcbmV2ZW50OiAyXzMsIGFmdGVyIDFfMSwgMzBkXG5jb25jdXJyZW50OiAyXzQsIGFmdGVyIDFfMSwgMzBkXG5zZXJ2ZXI6IDJfNSwgYWZ0ZXIgMV8xLCAzMGRcbmNhY2hlOiAyXzYsIGFmdGVyIDFfMSwgMzBkXG5pbzogMl83LCBhZnRlciAxXzEsIDMwZFxuc2VjdGlvbiBidWlsZCB3ZWIgc29sdXRpb25cbm5ldDogM18xLCBhZnRlciAyXzEsIDMwZFxucmJhYzogM18xLCBhZnRlciAyXzEsIDMwZCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
