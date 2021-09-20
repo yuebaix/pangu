@@ -34,10 +34,6 @@ ext {
     panguReadySpringBootStarterVersion = panguVersion
 }
 
-repositories {
-    maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
-}
-
 dependencyManagement {
     resolutionStrategy {
         cacheChangingModulesFor 0, 'seconds'
