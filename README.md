@@ -3,6 +3,7 @@
 > The name comes from the creator of universe in ancient chinese mythology.<br/>
 > 以中国古代神话中创世神命名
 
+
 ## What PanGu Is? 盘古是什么？
 
 * [x] A Normal form of framework code. 框架代码范式。
@@ -13,6 +14,7 @@
 * [x] Out of the box and easy to use. 开箱即用且易于使用。
 * [x] Convenient for secondary development and expansion. 便于二次开发与扩展。
 * [x] Exploration of reactive programing and coroutines. 对响应式与协程的探索。
+
 
 ## Structure
 
@@ -26,22 +28,30 @@
 └─pangu-test (integrated test code 集成测试代码)
 ```
 
-## Give a Star! ⭐
 
-If you like or are using this project to learn or start your solution, please give it a star. Thanks!<br/>
-觉得不错的话，别忘 star 👏
+## Feature
+
+Website Enhancements | OpenApi UI | Api Log. 网站增强特性、接口UI、接口日志。
+
+```text
+pangu-spring-boot-starter
+springfox-boot-starter
+knife4j-spring-ui
+logbook-spring-boot-starter
+```
+
 
 ## Getting Started
 
 ### 1.Add dependency(Must). 添加依赖(必须)。
 
-* gradle
+* Gradle
 
 ```groovy
 implementation 'com.yuebaix:pangu-ready-spring-boot-starter:0.0.1'
 ```
 
-* maven
+* Maven
 
 ```xml
 <dependency>
@@ -72,23 +82,35 @@ pangu.readystarter.logbook.config.obfuscate-body-params=token,password,mobile,em
 
 ### 4.Kickstart. 启动。
 
-Run your springboot application. Console output will look like below. 启动你的Springboot应用。控制台输出会向下面这样。
+Run your springboot application. Console output will look like below.
 
-![Console Output]()
+启动你的Springboot应用。控制台输出会像下面这样。
+
+![Console Output](docs/img/console_output.png)
 
 ### 5.Enjoy. 愉快玩耍吧。😉
+
 
 ## Roadmap
 
 ![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbmRhdGVGb3JtYXQgWVlZWS1NTS1ERFxudGl0bGUgUGFuR3UgUm9hZG1hcFxuc2VjdGlvbiBpbml0IGZyYW1lXG5hcmNoZXR5cGU6IGFjdGl2ZSwgMV8xLCAyMDIxLTA5LTA0LCAxNWRcbnNlY3Rpb24gYnVpbGQgZnJhbWVcbmNvbmNlcHQ6IGFjdGl2ZSwgMl8xLCBhZnRlciAxXzEsIDMwZFxuY29uZmlnOiBhY3RpdmUsIDJfMiwgYWZ0ZXIgMV8xLCAzMGRcbmV2ZW50OiAyXzMsIGFmdGVyIDFfMSwgMzBkXG5jb25jdXJyZW50OiAyXzQsIGFmdGVyIDFfMSwgMzBkXG5zZXJ2ZXI6IDJfNSwgYWZ0ZXIgMV8xLCAzMGRcbmNhY2hlOiAyXzYsIGFmdGVyIDFfMSwgMzBkXG5pbzogMl83LCBhZnRlciAxXzEsIDMwZFxuc2VjdGlvbiBidWlsZCB3ZWIgc29sdXRpb25cbm5ldDogM18xLCBhZnRlciAyXzEsIDMwZFxucmJhYzogM18xLCBhZnRlciAyXzEsIDMwZCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
 
+
 ## LICENSE
 
 [![Blush License](http://img.shields.io/badge/license-blush-white?style=for-the-badge&labelColor=black&color=white)](https://github.com/yuebaix/pangu/blob/main/LICENSE)
 
+
 ## Maintainers
 
 [![Gmail](https://img.shields.io/badge/-yuebaix@outlook.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:yuebaix@outlook.com)
+
+
+## Give a Star! ⭐
+
+If you like or are using this project to learn or start your solution, please give it a star. Thanks!<br/>
+觉得不错的话，别忘 star 👏
+
 
 ## Changelog
 
