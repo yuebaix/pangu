@@ -31,7 +31,13 @@
 
 ## Feature
 
-Website Enhancements | OpenApi UI | Api Log. 网站增强特性、接口UI、接口日志。
+Website Enhancements | OpenApi UI | Api Log | More
+
+网站增强特性 | 接口UI | 接口日志 | 更多
+
+PanGu has already added these starters below up. And there's gonna be more.
+
+盘古已经引入了下面这些starter。并且还会有更多。
 
 ```text
 pangu-spring-boot-starter
@@ -43,15 +49,17 @@ logbook-spring-boot-starter
 
 ## Getting Started
 
-### 1.Add dependency(Must). 添加依赖(必须)。
 
-* Gradle
+
+#### _1. Add dependency(Must). 添加依赖(必须)。_
+
+Gradle
 
 ```groovy
 implementation 'com.yuebaix:pangu-ready-spring-boot-starter:0.0.1'
 ```
 
-* Maven
+Maven
 
 ```xml
 <dependency>
@@ -61,9 +69,9 @@ implementation 'com.yuebaix:pangu-ready-spring-boot-starter:0.0.1'
 </dependency>
 ```
 
-### 2.Manage dependencies(Recommend). 依赖管理(推荐)。
+#### _2. Manage dependencies(Recommend). 依赖管理(推荐)。_
 
-### 3.Config to meet your flavor(Unnecessary). 配置一下满足你的口味(非必须)。
+#### _3. Config to meet your flavor(Unnecessary). 配置一下满足你的口味(非必须)。_
 
 Here's the default configuration. 下面是默认的配置
 
@@ -80,15 +88,13 @@ pangu.readystarter.logbook.enabled=true
 pangu.readystarter.logbook.config.obfuscate-body-params=token,password,mobile,email
 ```
 
-### 4.Kickstart. 启动。
+#### _4. Kickstart. 启动。_
 
-Run your springboot application. Console output will look like below.
+Run your springboot application. Console output will look like below. 启动你的Springboot应用。控制台输出会像下面这样。
 
-启动你的Springboot应用。控制台输出会像下面这样。
+![Console Output](https://docs.yuebaix.com/img/host/console_output.png)
 
-![Console Output](docs/img/console_output.png)
-
-### 5.Enjoy. 愉快玩耍吧。😉
+#### _5. Enjoy. 愉快玩耍吧。😉_
 
 
 ## Roadmap
