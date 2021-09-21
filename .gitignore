@@ -27,6 +27,4 @@ out/
 *.class
 *.classpath
 *.jar
-gradle/wrapper/
-gradlew
 gradlew.bat
