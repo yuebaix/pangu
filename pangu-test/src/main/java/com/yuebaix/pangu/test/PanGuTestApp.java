@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
 @ComponentScan(
+        basePackages = "com.yuebaix.pangu",
         useDefaultFilters = false,
         includeFilters = {
                 @ComponentScan.Filter(type = FilterType.CUSTOM, classes = PanGuScan.IncludeTypeFilter.class)

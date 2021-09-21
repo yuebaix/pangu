@@ -35,6 +35,7 @@ import java.util.stream.Collectors;
  *
  * # 2.code (better right above @SpringBootApplication)
  * @ComponentScan(
+ *         basePackages = "com.yuebaix.pangu",
  *         useDefaultFilters = false,
  *         includeFilters = {
  *                 @ComponentScan.Filter(type = FilterType.CUSTOM, classes = PanGuScan.IncludeTypeFilter.class)
@@ -70,7 +71,7 @@ public abstract class PanGuScan implements EnvironmentAware {
                     PanGuScanTypeFilterPatternConfig activePatternConfig = fromConfig(activeConfig);
                     this.activeProfile = active;
                     this.activePatternConfig = activePatternConfig;
-                    PanGuLog.debug(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan " + this.getClass().getSimpleName() +
+                    PanGuLog.info(log, PanGuCoreConst.PAN_GU_TRACE_PREFIX + "PanGuScan " + this.getClass().getSimpleName() +
                             " Initialized | active:{} | config:{}", active, JacksonUtil.write(activeConfig));
                 }
             }
