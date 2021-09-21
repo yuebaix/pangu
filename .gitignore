@@ -25,5 +25,4 @@ out/
 .settings/
 *.class
 *.classpath
-*.jar
 gradlew.bat
