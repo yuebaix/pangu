@@ -1,13 +1,17 @@
 package com.yuebaix.pangu.test.controller.demo;
 
 import com.alibaba.fastjson.JSONObject;
+import com.yuebaix.pangu.autoconfigure.common.PanGuStarterConst;
+import com.yuebaix.pangu.common.util.JarVersionUtil;
 import com.yuebaix.pangu.web.base.BaseReq;
 import com.yuebaix.pangu.web.base.BaseResp;
 import com.yuebaix.pangu.web.base.Encrypted;
 import com.yuebaix.pangu.web.base.PreCheck;
 import com.yuebaix.pangu.web.base.RespCodeConst;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @RestController
 @RequestMapping("/demo/demo")
 public class DemoController {
@@ -45,5 +50,13 @@ public class DemoController {
         result.put("encrypted", encrypted);
         result.put("clientDecrypted", clientDecrypted);
         return BaseResp.success(result);
+    }
+
+    @ApiOperation("版本")
+    @GetMapping("/version")
+    public BaseResp version() {
+        String panGuStarterVersion = JarVersionUtil.determine(PanGuStarterConst.class);
+        log.info(panGuStarterVersion);
+        return BaseResp.success(panGuStarterVersion);
     }
 }
