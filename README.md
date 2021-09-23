@@ -40,10 +40,10 @@ PanGu has already added these starters below up. And there's gonna be more.
 盘古已经引入了下面这些starter。并且还会有更多。
 
 ```text
-pangu-spring-boot-starter
-springfox-boot-starter
-knife4j-spring-ui
-logbook-spring-boot-starter
+pangu-spring-boot-starter     ---> power to make web development sweet
+springfox-boot-starter        ---> openapi doc for web interfaces
+knife4j-spring-ui             ---> nice ui for openapi doc
+logbook-spring-boot-starter   ---> record all requests and responses in an efficient way
 ```
 
 
