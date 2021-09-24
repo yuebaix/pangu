@@ -10,6 +10,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'junit:junit'
+    testImplementation 'ch.qos.logback:logback-classic'
 
     api project(':pangu-common')
 }

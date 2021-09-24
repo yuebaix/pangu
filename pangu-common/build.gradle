@@ -4,8 +4,6 @@ plugins {
 }
 
 dependencies {
-    implementation "org.slf4j:slf4j-api"
-
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testCompileOnly 'org.projectlombok:lombok'
@@ -15,5 +13,6 @@ dependencies {
     testImplementation 'ch.qos.logback:logback-classic'
     //testImplementation 'org.slf4j:slf4j-simple'
 
+    api "org.slf4j:slf4j-api"
     api 'com.fasterxml.jackson.core:jackson-databind'
 }

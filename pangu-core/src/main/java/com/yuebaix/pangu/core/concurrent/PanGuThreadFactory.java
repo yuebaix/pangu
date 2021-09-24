@@ -18,6 +18,10 @@ public class PanGuThreadFactory implements ThreadFactory {
     private static final AtomicInteger threadPoolNumber = new AtomicInteger(1);
     private final AtomicInteger threadNumber = new AtomicInteger(1);
 
+    public PanGuThreadFactory() {
+        this(null, null, false, -1);
+    }
+
     public PanGuThreadFactory(String threadGroupName) {
         this(threadGroupName, null, false, -1);
     }
@@ -38,7 +42,7 @@ public class PanGuThreadFactory implements ThreadFactory {
             threadNamePrefix = String.join(THREAD_NAME_SP,
                     threadGroupName,
                     EMPTY_STR + threadPoolNumber.getAndIncrement(),
-                    this.getClass().getSimpleName(),
+                    //this.getClass().getSimpleName(),
                     EMPTY_STR);
         }
         this.threadGroup = new ThreadGroup(threadGroupName);
