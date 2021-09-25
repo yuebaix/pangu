@@ -1,6 +1,11 @@
 package com.yuebaix.pangu.core;
 
 import com.yuebaix.pangu.common.PanGuLog;
+import com.yuebaix.pangu.core.concept.Config;
+import com.yuebaix.pangu.core.concept.Context;
+import com.yuebaix.pangu.core.concept.Executor;
+import com.yuebaix.pangu.core.concept.Input;
+import com.yuebaix.pangu.core.concept.Output;
 import com.yuebaix.pangu.core.concurrent.PanGuThreadFactory;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -80,5 +85,32 @@ public class PanGuTest {
         bossExecutorService.awaitTermination(3000, TimeUnit.MILLISECONDS);
         workerExecutorService.shutdown();
         workerExecutorService.awaitTermination(3000, TimeUnit.MILLISECONDS);
+    }
+
+    @Test
+    public void testEngine() {
+        Config cfg = new Config() {};
+        Executor executor = new Executor() {
+            @Override
+            public void execute(Context ctx) {
+
+            }
+        };
+        Context context = new Context() {
+            @Override
+            public void setInput(Input input) {
+
+            }
+
+            @Override
+            public Output getOutput() {
+                return null;
+            }
+        };
+        Input input = new Input() {};
+        context.setInput(input);
+        executor.execute(context);
+        Output output = context.getOutput();
+        System.out.println(output);
     }
 }
