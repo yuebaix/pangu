@@ -120,7 +120,7 @@ public class PanGuTest {
     @SneakyThrows
     public void testScheduler() {
         ScheduledExecutorService scheduler = PanGuConcurrentKit.scheduler();
-        scheduler.scheduleAtFixedRate(() -> System.out.println("scheduler"), 0, 3000, TimeUnit.MILLISECONDS);
+        scheduler.scheduleAtFixedRate(() -> PanGuLog.info(log, "scheduler"), 0, 3000, TimeUnit.MILLISECONDS);
         //scheduler.shutdown();
         scheduler.awaitTermination(15000, TimeUnit.MILLISECONDS);
     }
