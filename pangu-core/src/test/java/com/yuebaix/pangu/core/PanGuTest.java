@@ -6,6 +6,7 @@ import com.yuebaix.pangu.core.concept.Context;
 import com.yuebaix.pangu.core.concept.Executor;
 import com.yuebaix.pangu.core.concept.Input;
 import com.yuebaix.pangu.core.concept.Output;
+import com.yuebaix.pangu.core.concurrent.PanGuConcurrentKit;
 import com.yuebaix.pangu.core.concurrent.PanGuThreadFactory;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +14,7 @@ import org.junit.Test;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -112,5 +114,14 @@ public class PanGuTest {
         executor.execute(context);
         Output output = context.getOutput();
         System.out.println(output);
+    }
+
+    @Test
+    @SneakyThrows
+    public void testScheduler() {
+        ScheduledExecutorService scheduler = PanGuConcurrentKit.scheduler();
+        scheduler.scheduleAtFixedRate(() -> System.out.println("scheduler"), 0, 3000, TimeUnit.MILLISECONDS);
+        //scheduler.shutdown();
+        scheduler.awaitTermination(15000, TimeUnit.MILLISECONDS);
     }
 }
