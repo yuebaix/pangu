@@ -5,11 +5,13 @@ public interface PanGuStarterConst {
 
     String PAN_GU_STARTER_ENABLED = "pangu.starter.enabled";
 
-    String PAN_GU_STARTER_CONTEXT_HOLDER_ENABLED = "pangu.starter.ctxHolder.enabled";
-
     String PAN_GU_STARTER_BANNER_ENABLED = "pangu.starter.banner.enabled";
     String PAN_GU_STARTER_BANNER_SPRINGBOOT_ENABLED = "pangu.starter.banner.springboot.enabled";
     String PAN_GU_STARTER_BANNER_PAN_GU_ENABLED = "pangu.starter.banner.pangu.enabled";
+
+    String PAN_GU_STARTER_OPTIMIZE_ENABLED = "pangu.starter.optimize.enabled";
+    String PAN_GU_STARTER_OPTIMIZE_CONTEXT_HOLDER_ENABLED = "pangu.starter.optimize.ctxHolder.enabled";
+    String PAN_GU_STARTER_OPTIMIZE_AFTERBURNER_ENABLED = "pangu.starter.optimize.afterBurner.enabled";
 
     String SPRING_BOOT_BANNER_URI = "META-INF/pangu/springboot_banner.txt";
     String PAN_GU_BANNER_URI = "META-INF/pangu/pangu_banner.txt";
