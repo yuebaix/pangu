@@ -13,6 +13,7 @@ ext {
     lombokVersion = '1.18.20'
     mapstructVersion = '1.4.2.Final'
 
+    toml4jVersion = '0.7.2'
     commonLang3Version = '3.12.0'
     commonsCollections4Version = '4.4'
     commonsNetVersion = '3.8.0'
@@ -51,6 +52,7 @@ dependencyManagement {
         dependency "org.mapstruct:mapstruct:${mapstructVersion}"
         dependency "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 
+        dependency "com.moandjiezana.toml:toml4j:${toml4jVersion}"
         dependency "org.apache.commons:commons-lang3:${commonLang3Version}"
         dependency "org.apache.commons:commons-collections4:${commonsCollections4Version}"
         dependency "commons-net:commons-net:${commonsNetVersion}"

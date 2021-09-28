@@ -15,4 +15,6 @@ dependencies {
 
     api "org.slf4j:slf4j-api"
     api 'com.fasterxml.jackson.core:jackson-databind'
+    api 'com.fasterxml.jackson.module:jackson-module-afterburner'
+    api 'com.moandjiezana.toml:toml4j'
 }

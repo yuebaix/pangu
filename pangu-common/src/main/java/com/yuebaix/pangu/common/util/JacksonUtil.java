@@ -5,21 +5,24 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
 import lombok.SneakyThrows;
 
 public final class JacksonUtil {
     private static final ObjectMapper objectMapperHolder;
     static {
-        ObjectMapper ob = new ObjectMapper();
+        ObjectMapper om = new ObjectMapper();
         //允许序列化空POJO
-        ob.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
+        om.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
         //把时间按照字符串输出
-        ob.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+        om.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         //POJO中的null值不输出
-        ob.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        om.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         //在遇到未知属性的时候不抛出异常
-        ob.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        objectMapperHolder = ob;
+        om.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+        //注册afterburner优化动态字节码生成
+        om.registerModule(new AfterburnerModule());
+        objectMapperHolder = om;
     }
     private JacksonUtil() {}
 
