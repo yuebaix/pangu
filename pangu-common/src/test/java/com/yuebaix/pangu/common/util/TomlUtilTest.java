@@ -1,5 +1,7 @@
 package com.yuebaix.pangu.common.util;
 
+import com.fasterxml.jackson.dataformat.javaprop.JavaPropsMapper;
+import com.fasterxml.jackson.dataformat.javaprop.JavaPropsSchema;
 import com.moandjiezana.toml.Toml;
 import lombok.Data;
 import lombok.SneakyThrows;
@@ -17,12 +19,30 @@ public class TomlUtilTest {
         if (inputStream != null) {
             inputStream.close();
         }
-        String ip = toml.getString("ip");
-        System.out.println(ip);
-        Long port = toml.getLong("port");
-        System.out.println(port);
         FakeConfig fakeConfig = toml.to(FakeConfig.class);
         System.out.println(JacksonUtil.write(fakeConfig));
+    }
+
+    @Test
+    @SneakyThrows
+    public void testProperties() {
+        InputStream inputStream = ClassUtil.getDefaultClassLoader().getResourceAsStream("test/fakeconfig.properties");
+
+        JavaPropsMapper mapper = PropertiesUtil.getJavaPropsMapperHolder();
+        JavaPropsSchema schema = JavaPropsSchema.emptySchema()
+                .withPrefix("config");
+
+        FakeConfig result = mapper.readerFor(FakeConfig.class)
+                .with(schema)
+                .readValue(inputStream);
+
+        if (inputStream != null) {
+            inputStream.close();
+        }
+
+        String props = mapper.writerFor(FakeConfig.class)
+                .writeValueAsString(result);
+        System.out.println(props);
     }
 
     @Data
