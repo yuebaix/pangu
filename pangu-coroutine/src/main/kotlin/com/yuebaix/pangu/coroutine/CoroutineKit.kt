@@ -7,7 +7,7 @@ import kotlinx.coroutines.withContext
 import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executor
 import java.util.function.Supplier
 
 object CoroutineKit {
@@ -20,14 +20,14 @@ object CoroutineKit {
     }*/
 
     @JvmStatic
-    fun <T> elastic(executor: ExecutorService, vararg suppliers: Supplier<T>): Flux<T> {
+    fun <T> elastic(executor: Executor, vararg suppliers: Supplier<T>): Flux<T> {
         val flux = parallelPublisher(executor, *suppliers)
         flux.blockLast()
         return flux
     }
 
     @JvmStatic
-    fun <T> parallelPublisher(executor: ExecutorService, vararg suppliers: Supplier<T>): Flux<T> {
+    fun <T> parallelPublisher(executor: Executor, vararg suppliers: Supplier<T>): Flux<T> {
         var flux = Flux.empty<T>()
         if (suppliers.isNotEmpty()) {
             val list = suppliers.map { supplier -> elasticPublisher(executor.asCoroutineDispatcher(), supplier) }.toList()
@@ -37,7 +37,7 @@ object CoroutineKit {
     }
 
     @JvmStatic
-    fun <T> elasticPublisher(executor: ExecutorService, supplier: Supplier<T>): Mono<T> {
+    fun <T> elasticPublisher(executor: Executor, supplier: Supplier<T>): Mono<T> {
         return elasticPublisher(executor.asCoroutineDispatcher(), supplier);
     }
 
