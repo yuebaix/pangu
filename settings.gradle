@@ -5,3 +5,5 @@ include 'pangu-web'
 include 'pangu-spring-boot-starter'
 include 'pangu-ready-spring-boot-starter'
 include 'pangu-test'
+include 'pangu-coroutine'
+

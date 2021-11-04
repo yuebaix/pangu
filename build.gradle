@@ -8,12 +8,7 @@ allprojects {
     version = '0.0.2-SNAPSHOT'
 }
 
-subprojects {
-    apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
-    //apply from: "${rootDir}/oss-publish.gradle"
-
-    apply plugin: 'java'
-
+subprojects { p -> {
     repositories {
         //mavenLocal()
         //maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
@@ -23,20 +18,28 @@ subprojects {
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
     }
 
-    jar {
-        afterEvaluate {
-            manifest {
-                attributes 'Implementation-Title': archiveBaseName
-                attributes 'Implementation-Version': archiveVersion
-                attributes 'Built-Gradle': gradle.gradleVersion
-                attributes 'Bundle-DocURL': 'https://docs.yuebaix.com/docs/pangu/'
-                attributes 'Build-OS': System.getProperty("os.name")
-                attributes 'Build-Jdk': System.getProperty("java.version")
-                attributes 'Build-Timestamp': LocalDateTime.now().format("yyyy-MM-dd HH:mm:ss")
+    //apply from: "${rootDir}/oss-publish.gradle"
+
+    if (p != project(':pangu-coroutine')) {
+        apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
+
+        apply plugin: 'java'
+
+        jar {
+            afterEvaluate {
+                manifest {
+                    attributes 'Implementation-Title': archiveBaseName
+                    attributes 'Implementation-Version': archiveVersion
+                    attributes 'Built-Gradle': gradle.gradleVersion
+                    attributes 'Bundle-DocURL': 'https://docs.yuebaix.com/docs/pangu/'
+                    attributes 'Build-OS': System.getProperty("os.name")
+                    attributes 'Build-Jdk': System.getProperty("java.version")
+                    attributes 'Build-Timestamp': LocalDateTime.now().format("yyyy-MM-dd HH:mm:ss")
+                }
             }
         }
     }
-}
+}}
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
