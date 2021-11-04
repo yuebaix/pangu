@@ -22,23 +22,24 @@ subprojects { p -> {
 
     if (p != project(':pangu-coroutine')) {
         apply from: "${rootDir}/pangu-ready-spring-boot-starter/integrate/pangu-ready-denpendencies.gradle"
+    }
 
-        apply plugin: 'java'
+    apply plugin: 'java'
 
-        jar {
-            afterEvaluate {
-                manifest {
-                    attributes 'Implementation-Title': archiveBaseName
-                    attributes 'Implementation-Version': archiveVersion
-                    attributes 'Built-Gradle': gradle.gradleVersion
-                    attributes 'Bundle-DocURL': 'https://docs.yuebaix.com/docs/pangu/'
-                    attributes 'Build-OS': System.getProperty("os.name")
-                    attributes 'Build-Jdk': System.getProperty("java.version")
-                    attributes 'Build-Timestamp': LocalDateTime.now().format("yyyy-MM-dd HH:mm:ss")
-                }
+    jar {
+        afterEvaluate {
+            manifest {
+                attributes 'Implementation-Title': archiveBaseName
+                attributes 'Implementation-Version': archiveVersion
+                attributes 'Built-Gradle': gradle.gradleVersion
+                attributes 'Bundle-DocURL': 'https://docs.yuebaix.com/docs/pangu/'
+                attributes 'Build-OS': System.getProperty("os.name")
+                attributes 'Build-Jdk': System.getProperty("java.version")
+                attributes 'Build-Timestamp': LocalDateTime.now().format("yyyy-MM-dd HH:mm:ss")
             }
         }
     }
+
 }}
 
 tasks.withType(JavaCompile) {
