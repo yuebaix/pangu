@@ -10,8 +10,8 @@
 
 ```text
 1.run one to many suppliers on target executor with coroutines and call blockLast()
-2.run one to many suppliers on target executor with coroutines adn return cooldown flux
-3.run one supplier on target executor with coroutines adn return cooldown mono
+2.run one to many suppliers on target executor with coroutines and return cooldown flux
+3.run one supplier on target executor with coroutines and return cooldown mono
 ```
 
 ## usage
