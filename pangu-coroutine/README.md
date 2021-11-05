@@ -23,7 +23,7 @@ ext {
     kotlinVersion = '1.5.30'
     kotlinCoroutineVersion = '1.5.2'
     reactorVersion = '3.4.1'
-    panguVersion = '0.0.1-SNAPSHOT'
+    panguVersion = '0.0.1'
 }
 
 dependencyManagement {
