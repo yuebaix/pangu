@@ -57,4 +57,6 @@ dependencies {
     //implementation "com.yuebaix:pangu-web:${panguWebVersion}"
     //implementation "com.yuebaix:pangu-spring-boot-starter:${panguSpringBootStarterVersion}"
     //implementation "com.yuebaix:pangu-ready-spring-boot-starter:${panguReadySpringBootStarterVersion}"
+
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.6'
 }

@@ -11,9 +11,6 @@ dependencies {
 
     testImplementation 'junit:junit'
 
-    implementation 'io.swagger:swagger-annotations'
-    implementation 'io.swagger:swagger-models'
-
     api 'org.apache.commons:commons-lang3'
     api 'org.apache.commons:commons-collections4'
     api 'cn.hutool:hutool-crypto'

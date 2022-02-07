@@ -21,11 +21,6 @@ ext {
     fastjsonVersion = '1.2.76'
     hutoolVersion = '5.7.7'
 
-    swaggerModelVersion = '1.5.21'
-    springPluginVersion = '2.0.0.RELEASE'
-    springfoxStarterVersion = '3.0.0'
-    knife4jUiVersion = '3.0.3'
-
     logbookVersion = '2.12.0'
 
     panguVersion = '0.0.1'
@@ -62,12 +57,6 @@ dependencyManagement {
         dependency "cn.hutool:hutool-crypto:${hutoolVersion}"
         dependency "cn.hutool:hutool-extra:${hutoolVersion}"
 
-        dependency "io.swagger:swagger-annotations:${swaggerModelVersion}"
-        dependency "io.swagger:swagger-models:${swaggerModelVersion}"
-        dependency "org.springframework.plugin:spring-plugin-core:${springPluginVersion}"
-        dependency "org.springframework.plugin:spring-plugin-metadata:${springPluginVersion}"
-        dependency "io.springfox:springfox-boot-starter:${springfoxStarterVersion}"
-        dependency "com.github.xiaoymin:knife4j-spring-ui:${knife4jUiVersion}"
         dependency "org.zalando:logbook-spring-boot-starter:${logbookVersion}"
 
         dependency "com.yuebaix:pangu-common:${panguCommonVersion}"

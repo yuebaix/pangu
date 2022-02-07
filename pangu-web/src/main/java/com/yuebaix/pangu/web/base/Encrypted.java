@@ -6,7 +6,6 @@ import cn.hutool.crypto.asymmetric.*;
 import cn.hutool.crypto.symmetric.AES;
 import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
 import com.yuebaix.pangu.common.util.JacksonUtil;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 
@@ -35,15 +34,15 @@ import java.security.KeyPair;
  */
 @Getter
 public class Encrypted<T> {
-    @ApiModelProperty(value = "JSON数据字段参考(不作字段使用，仅供文档使用)")
+    //JSON数据字段参考(不作字段使用，仅供文档使用)
     private T _refer;
-    @ApiModelProperty(value = "密钥密文")
+    //密钥密文
     private String key;
-    @ApiModelProperty(value = "时间戳")
+    //时间戳
     private Long t;
-    @ApiModelProperty(value = "数据密文")
+    //数据密文
     private String data;
-    @ApiModelProperty(value = "签名")
+    //签名
     private String sign;
 
     //服务端加密

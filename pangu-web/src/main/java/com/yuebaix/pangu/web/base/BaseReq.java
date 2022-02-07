@@ -1,16 +1,12 @@
 package com.yuebaix.pangu.web.base;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
  * 基础请求类
  */
-@ApiModel("请求基类")
 @Data
 public class BaseReq<T> {
-    @ApiModelProperty("内容")
     private T cnt;
 
     /**

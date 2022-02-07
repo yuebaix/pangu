@@ -15,7 +15,7 @@ import javax.annotation.PostConstruct;
         matchIfMissing = true
 )
 @Configuration
-@Import({SwaggerAutoConfiguration.class, LogbookAutoConfiguration.class})
+@Import({LogbookAutoConfiguration.class})
 @Slf4j
 public class PanGuReadyAutoConfiguration {
     @PostConstruct

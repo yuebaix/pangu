@@ -8,7 +8,6 @@ import com.yuebaix.pangu.web.base.BaseResp;
 import com.yuebaix.pangu.web.base.Encrypted;
 import com.yuebaix.pangu.web.base.PreCheck;
 import com.yuebaix.pangu.web.base.RespCodeConst;
-import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +23,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/demo/demo")
 public class DemoController {
-    @ApiOperation("示例")
     @PostMapping(value = "/check", consumes = MediaType.APPLICATION_JSON_VALUE)
     public BaseResp check(@RequestBody BaseReq req) {
         PreCheck.checkArgument(req != null, RespCodeConst.REVIEW);
@@ -52,7 +50,6 @@ public class DemoController {
         return BaseResp.success(result);
     }
 
-    @ApiOperation("版本")
     @GetMapping("/version")
     public BaseResp version() {
         String panGuStarterVersion = JarVersionUtil.determine(PanGuStarterConst.class);

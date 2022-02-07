@@ -1,23 +1,17 @@
 package com.yuebaix.pangu.web.base;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
  * 基础回复类
  */
-@ApiModel("回复基类")
 @Data
 public class BaseResp<T> {
     /**描述*/
-    @ApiModelProperty(value = "描述", example = "成功")
     private String msg;
     /**编码*/
-    @ApiModelProperty(value = "编码", example = "0")
     private Integer code;
     /**数据内容*/
-    @ApiModelProperty("数据")
     private T data;
 
     /**
